@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">dataBase</string>
+    <string name="name">Name</string>
+    <string name="nameHint">e.g  john</string>
+    <string name="phone">Phone number</string>
+    <string name="phoneHint">e.g - 98673*****</string>
+    <string name="employee">Employ ID</string>
+    <string name="employeeHint">e.g  1 </string>
+    <string name="email">Email</string>
+    <string name="emailHint">e.g abc@gmail.com</string>
+    <string name="button">Save</string>
+    <string name="addData">Add more data</string>
+</resources>
