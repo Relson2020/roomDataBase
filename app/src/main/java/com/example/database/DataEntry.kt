@@ -3,6 +3,7 @@ package com.example.database
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.database.databinding.ActivityDataEntryBinding
 import kotlinx.coroutines.Dispatchers
@@ -23,7 +24,7 @@ class DataEntry : AppCompatActivity() {
 
         //dataBase instance
 
-        database = NoteDataBase.getNOteDataBaseReference(GlobalInstance.getApplication())
+        database = NoteDataBase.getNOteDataBaseReference(this)
 
         binding.SaveDataButton.setOnClickListener{
             val name = binding.nameEditText.text.toString()
@@ -37,9 +38,11 @@ class DataEntry : AppCompatActivity() {
                 database?.getNoteDao()?.insert(NoteEntities(employee,name,phone,email))
             }
 
-           // val intent =  Intent(this,MainActivity::class.java)
-        //startActivity(intent)
+            Toast.makeText(this, "Your data is saved ", Toast.LENGTH_SHORT).show()
 
+            // intent for to go to firstPage
+            val intent =  Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
 
 

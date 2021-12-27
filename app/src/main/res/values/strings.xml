@@ -10,4 +10,6 @@
     <string name="emailHint">e.g abc@gmail.com</string>
     <string name="button">Save</string>
     <string name="addData">Add more data</string>
+    <string name="phoneNumber">Phone number</string>
+
 </resources>

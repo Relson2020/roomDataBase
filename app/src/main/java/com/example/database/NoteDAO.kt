@@ -11,6 +11,6 @@ interface NoteDAO {
     @Insert
     suspend fun insert(note : NoteEntities)
 
-    @Query("Select * from profileDetails ")
+    @Query("SELECT * FROM profileDetails")
     fun getAllNotes() : LiveData<List<NoteEntities>>
 }
